@@ -1,10 +1,17 @@
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:lab10/login.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+        apiKey: "AIzaSyCJ6zXUwEYUWYKlrdGyhHW-my1NoYlrDH0",
+        appId: "1:743736802668:android:aa4c52049f43dc394d8749",
+        messagingSenderId: "743736802668",
+        projectId: "lab10-1b8c0"),
+  );
   runApp(MyApp());
 }
 
